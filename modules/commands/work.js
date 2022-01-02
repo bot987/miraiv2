@@ -1,11 +1,11 @@
 module.exports.config = {
-	name: "work",
+	name: "lamviec",
 	version: "0.0.1",
 	hasPermssion: 0,
-	credits: "CatalizCS",
+	credits: "KEY",
 	description: "Có làm thì mới có ăn!",
 	commandCategory: "Economy",
-	usages: "work",
+	usages: "lamviec",
     cooldowns: 5,
     dependencies: ["parse-ms"],
     envConfig: {
@@ -28,7 +28,7 @@ module.exports.run = async ({ event, api, Currencies, __GLOBAL }) => {
             "đi sửa xe",
             "làm nhân viên lập trình",
             "đi hack facebook",
-            "làm thợ sửa ống nước ( ͡° ͜ʖ ͡°)",
+            "làm thợ sửa ống nước may mắn ( ͡° ͜ʖ ͡°)",
             "làm đầu bếp",
             "làm thợ hồ",
             "fake taxi",
@@ -38,11 +38,11 @@ module.exports.run = async ({ event, api, Currencies, __GLOBAL }) => {
             "làm nội trợ",
             "đi vả mấy thằng sao đỏ, giun vàng",
             "đi bán hoa",
-            "tìm jav/hentai code cho Quang Sáng",
+            "đi chơi đĩ trả giá",
             "đi chơi Yasuo trong rank và gánh team"
         ];
-        let amount = Math.floor(Math.random() * 600);
-        api.sendMessage(`Bạn ${job[Math.floor(Math.random() * job.length)]} và đã nhận được số tiền là: ${amount} coins`, threadID, () => {
+        let amount = Math.floor(Math.random() * 31039);
+        api.sendMessage(`Bạn ${job[Math.floor(Math.random() * job.length)]} và đã nhận được số tiền là: ${amount} tiền làm việc`, threadID, () => {
              Currencies.increaseMoney(event.senderID, parseInt(amount));
              Currencies.setData(event.senderID, options = { workTime: Date.now() });
         }, messageID);
